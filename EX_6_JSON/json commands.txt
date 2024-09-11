@@ -1,0 +1,24 @@
+json commands
+jq '.[] | {name: .name, salary: .salary}' F:\CS19P16-DA-LAB-main\EX_6_JSON\employees.json
+Aggregation: Calculate the total salary.
+
+bash
+
+jq '[.[] | .salary] | add' F:\CS19P16-DA-LAB-main\EX_6_JSON\employees.json
+Count: Count the number of employees.
+
+bash
+
+jq '. | length' F:\CS19P16-DA-LAB-main\EX_6_JSON\employees.json
+Filter: Get employees from the Engineering department.
+
+bash
+
+jq '.[] | select(.department == "Engineering")' F:\CS19P16-DA-LAB-main\EX_6_JSON\employees.json
+Sort: Sort employees by age.
+
+bash
+
+jq 'sort_by(.age)' F:\CS19P16-DA-LAB-main\EX_6_JSON\employees.json
+
+gpt:https://chatgpt.com/share/16dc3d51-a0c1-4c70-8979-d49caab7d500
